@@ -11,19 +11,19 @@ class Event(CogExtension):
         ch = member.guild.system_channel
         if ch is None:
             ch = member.guild.text_channels[0]
-        await ch.send(message.codeblock(f'{member} Ya Hello!'))
+        await ch.send(message.codeblock(f'{member} hello!'))
 
     @commands.Cog.listener()
     async def on_member_remove(self, member):
         ch = member.guild.system_channel
         if ch is None:
             ch = member.guild.text_channels[0]
-        await ch.send(message.codeblock(f'{member} Bye Bye!'))
+        await ch.send(message.codeblock(f'{member} good bye!'))
 
     @commands.Cog.listener()
     async def on_message(self, msg):
-        if msg.content.lower() == 'yukitan' and msg.author != self.bot.user:
-            await msg.channel.send(message.codeblock('Nani?'))
+        if msg.content.lower() == 'mitomito' and msg.author != self.bot.user:
+            await msg.channel.send(message.codeblock('HIHI'))
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, err):

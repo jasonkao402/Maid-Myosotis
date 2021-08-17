@@ -17,13 +17,13 @@ bot = commands.Bot(command_prefix='>', case_insensitive=True,
 @bot.event
 async def on_ready():
     bot.client_id = (await bot.application_info()).id
-    print('>> YuKiTaN is on service <<')
+    print('>> MitoBot is on service <<')
 
 
 @bot.event
 async def on_connect():
     print(
-        f'YuKiTaN connected to Discord (latency: {round(bot.latency*1000)} ms).')
+        f'MitoBot connected to Discord (latency: {round(bot.latency*1000)} ms).')
 
 
 @bot.command()
@@ -51,7 +51,7 @@ async def close(ctx):
         await ctx.send(message.codeblock('Bye bye.'))
         await bot.close()
     else:
-        await ctx.send(message.codeblock('Pemission denied.(Only Yukimura0119 can use this commnad)'))
+        await ctx.send(message.codeblock('Pemission denied.(Only admin can use this commnad)'))
 
 for cog in [p.stem for p in Path(".").glob("./cogs/*.py")]:
     bot.load_extension(f'cogs.{cog}')
@@ -59,5 +59,5 @@ for cog in [p.stem for p in Path(".").glob("./cogs/*.py")]:
 print('Done.')
 
 
-print('YuKiTaN starting...')
+print('MitoBot starting...')
 bot.run(secret['Authorization'], reconnect=True)

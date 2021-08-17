@@ -32,22 +32,23 @@ class Main(CogExtension):
 
     @commands.command()
     async def hello(self, ctx):
-        embed = discord.Embed(title="Discord Robot YuKiTaN",
-                              description="Ya hello!!! My Name is YuKiTaN~~", color=0xfcc9b9,
+        embed = discord.Embed(title="Discord bot MitoBot",
+                              description="Hi My Name is Mito~~", color=0xfcc9b9,
                               timestamp=dt.datetime.utcnow())
-        embed.set_author(name="YuKiTaN", url="https://github.com/Yukimura0119/DiscordBot_YuKiTaN",
+        embed.set_author(name="MinoBot", url="https://github.com/jasonkao402/MitoBot",
                          icon_url="https://avatars.githubusercontent.com/u/35000486?v=4")
         embed.set_thumbnail(
             url="https://avatars.githubusercontent.com/u/35000486?v=4")
-        embed.add_field(name="Author", value="Yukimura0119", inline=False)
+        embed.add_field(
+            name="Author", value="Yukimura0119 & Jasonkao402", inline=False)
         embed.add_field(name="Language", value="Python", inline=False)
-        embed.add_field(name="Birthday", value="Sep 27, 2020 ", inline=False)
+        embed.add_field(name="Birthday", value="Aug 16, 2021 ", inline=False)
         embed.add_field(name="BloodType", value="A", inline=False)
         await ctx.send(embed=embed)
 
     @commands.command()
     async def website(self, ctx):
-        await ctx.send('Here is my website~\nhttps://github.com/Yukimura0119/DiscordBot_YuKiTaN')
+        await ctx.send('Here is my website~\nhttps://github.com/jasonkao402/MitoBot')
 
 
 def setup(bot):
