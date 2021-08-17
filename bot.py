@@ -10,7 +10,7 @@ from tools import message
 with open('data/setting/secret.json', 'r', encoding='utf8') as jdata:
     secret = json.load(jdata)
 
-bot = commands.Bot(command_prefix='$', case_insensitive=True,
+bot = commands.Bot(command_prefix='>', case_insensitive=True,
                    intents=discord.Intents.all())
 
 
@@ -45,6 +45,7 @@ async def reload(ctx, ext):
 
 
 @bot.command()
+@commands.has_role('botMaster')
 async def close(ctx):
     if ctx.message.author.id == int(secret['myID']):
         await ctx.send(message.codeblock('Bye bye.'))
