@@ -47,11 +47,8 @@ async def reload(ctx, ext):
 @bot.command()
 @commands.has_role('botMaster')
 async def close(ctx):
-    if ctx.message.author.id == int(secret['myID']):
-        await ctx.send(message.codeblock('Bye bye.'))
-        await bot.close()
-    else:
-        await ctx.send(message.codeblock('Pemission denied.(Only admin can use this commnad)'))
+    await ctx.send(message.codeblock('Bye bye.'))
+    await bot.close()
 
 for cog in [p.stem for p in Path(".").glob("./cogs/*.py")]:
     bot.load_extension(f'cogs.{cog}')
