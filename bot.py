@@ -3,7 +3,7 @@ from discord.ext import commands
 
 from pathlib import Path
 import json
-
+from keep_alive import keep_alive
 from tools import message
 
 
@@ -55,6 +55,6 @@ for cog in [p.stem for p in Path(".").glob("./cogs/*.py")]:
     print(f'Loaded {cog}.')
 print('Done.')
 
-
+keep_alive()
 print('MitoBot starting...')
 bot.run(secret['Authorization'], reconnect=True)
