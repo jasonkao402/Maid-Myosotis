@@ -35,10 +35,10 @@ class Main(CogExtension):
         embed = discord.Embed(title="Discord bot MitoBot",
                               description="Hi My Name is Mito~~", color=0xfcc9b9,
                               timestamp=dt.datetime.utcnow())
-        embed.set_author(name="MinoBot", url="https://github.com/jasonkao402/MitoBot",
-                         icon_url="https://avatars.githubusercontent.com/u/35000486?v=4")
+        embed.set_author(name="MitoBot", url="https://github.com/jasonkao402/MitoBot",
+                         icon_url="https://pbs.twimg.com/media/E7wn7V7XIAA4cUX?format=png&name=medium")
         embed.set_thumbnail(
-            url="https://avatars.githubusercontent.com/u/35000486?v=4")
+            url="https://pbs.twimg.com/media/E7wn7V7XIAA4cUX?format=png&name=medium")
         embed.add_field(
             name="Author", value="Yukimura0119 & Jasonkao402", inline=False)
         embed.add_field(name="Language", value="Python", inline=False)
