@@ -7,7 +7,7 @@ import random
 from extension.cog import CogExtension
 
 
-class Photo(CogExtension):
+class React(CogExtension):
     @commands.command()
     async def image(self, ctx, num=1):
         imgs = random.sample(
@@ -18,4 +18,4 @@ class Photo(CogExtension):
 
 
 def setup(bot):
-    bot.add_cog(Photo(bot))
+    bot.add_cog(React(bot))
